@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/indexStyle.css" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+
+    <script src="./js/indexJS.js"></script>
+    <title>Главная</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container__header">
+            <div class="header__body">
+                <a href="./index.html" class="header__logo">
+                    <img src="./images/логоДомик.jpg" alt="Логотип базы отдыха" title="Логотип базы отдыха">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li><a href="./index.html" class="header__link slick-element">Главная</a></li>
+                        <li><a href="./pages/rent.html" class="header__link slick-element">Прокат</a></li>
+                        <li><a href="./pages/book.html" class="header__link slick-element">Бронирование</a></li>
+                        <li><a href="./pages/cafe.html" class="header__link slick-element">Кафе</a></li>
+                        <li><a href="./pages/karaoke.html" class="header__link slick-element">Караоке-бар</a></li>
+                        <li><a href="./pages/profile.html" class="header__link slick-element">Личный кабинет</a></li>
+                    </ul>
+                    <div class="worktime hburger-active">
+                        Время работы: 9:00 – 23:00
+                    </div>
+                    <a class="workphone hburger-active" href="tel:+71234567890">
+                        +7-123-456-78-90
+                    </a>
+                </nav>
+                <div class="grid__works">
+                    <div class="header__workphone">
+                        Время работы:
+                    </div>
+                    <div class="header__worktime">
+                        9:00 – 23:00
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./images/Живые фото/forCarousel1.jpeg" alt="">
+                    <div class="text__container">
+                        Вас приветствует база отдыха "Победа"
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/Живые фото/Домик3-1.jpeg" alt="">
+                    <a class="text__container" href="#book__container">
+                        6 прекрасных летних беседок и домиков
+                    </a>
+                </div>
+                <div class="slide">
+                    <img src="./images/Живые фото/forCarousel3.jpeg" alt="">
+                    <a class="text__container" href="#book__container">
+                        Большой шатер и банкетный зал
+                    </a>
+                </div>
+                <div class="slide">
+                    <img src="./images/Живые фото/Прокат1.jpeg" alt="">
+                    <a class="text__container" href="#rent__container">
+                        Прокат развлекательного оборудования
+                    </a>
+                </div>
+                <div class="slide">
+                    <img src="./images/Живые фото/Кафе1.jpeg" alt="">
+                    <a class="text__container" href="#cafe__container">
+                        Уютное кафе
+                    </a>
+                </div>
+                <div class="slide">
+                    <img src="./images/Живые фото/Караоке-бар3.jpeg" alt="">
+                    <a class="text__container" href="#karaokeBar__container">
+                        Современный караоке-бар
+                    </a>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="control" id="prevBtn">&#10096;</button>
+                <button class="control" id="nextBtn">&#10097;</button>
+            </div>
+        </div>
+        <script src="./js/sliderJS.js"></script>
+    </div>
+    <main>
+        <span class="section__name">Новостной блок</span>
+        <div class="container__main">
+            <div class="news__container" id="news__container">
+                <div class="news__item">
+                    <div class="news__item__title">Открыты новые развлекательные зоны</div>
+                    <div class="news__item__content">
+                        С открытием летнего сезона на территории базы отдыха появились батуты, 
+                        волейбольная сетка. Информация по поводу цены прыжков на батуте и аренды волейбольного мяча 
+                        появится позже в разделе «Прокат».
+                    </div>
+                    <div class="news__item__date">12.06.2024</div>
+                </div>
+                <div class="news__item">
+                    <div class="news__item__title">
+                        Прокат снегоходов недоступен
+                    </div>
+                    <div class="news__item__content">
+                        К сожалению, прокат снегоходов 
+                        пока недоступен по техническим причинам.
+                    </div>
+                    <div class="news__item__date">15.02.2024</div>
+                </div>
+                <div class="news__item">
+                    <div class="news__item__title">Открыт зимний специальный сезон!</div>
+                    <div class="news__item__content">
+                        На базе отдыха «Победа» запускается серия
+                         мероприятий, посвященная новогодним забавам!
+                    </div>
+                    <div class="news__item__date">13.01.2024</div>
+                </div>
+                <div class="news__item">
+                    <div class="news__item__title">База отдыха переходит в осенний режим</div>
+                    <div class="news__item__content">
+                        С понедельника мы переходим в осенний режим. 
+                        Вся необходимая информация будет размещена позже.
+                    </div>
+                    <div class="news__item__date">22.09.2023</div>
+                </div>
+            </div>
+        </div>
+
+        <span class="section__name" id="book__container">Бронирование</span>
+        <div class="container__main">
+            <div class="book__container">
+                <div class="book__container__promo-card promo-card">
+                    <div class="book__container__promo-card__content">
+                        <div class="book__promo-card__title">Для бронирования на нашей базе отдыха доступны:</div>
+                        <ul class="book__places__list">
+                            <li class="book__place__li">6 домиков</li>
+                            <li class="book__place__li">6 летних беседок</li>
+                            <li class="book__place__li">банкетный зал</li>
+                            <li class="book__place__li">шатер под открытым небом</li>
+                        </ul>
+                        <div class="book_promo-card__inner__content">
+                            <button class="move__to__book__btn">
+                                <a href="./pages/book.html" class="to__book">Перейти к бронированию</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="book__container__promo-card__img">
+                        <img src="./images/Живые фото/Домик1-1.jpeg" alt="" class="book__promo__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <span class="section__name">Прокат оборудования</span>
+        <div class="container__main">
+            <div class="rent__container" id="rent__container"></div>
+        </div>
+        
+        <span class="section__name">Кафе</span>
+        <div class="container__main">
+            <div class="cafe__container" id="cafe__container"></div>
+        </div>
+
+        <span class="section__name">Караоке-бар</span>
+        <div class="container__main">
+            <div class="karaokeBar__container" id="karaokeBar__container"></div>
+        </div>
+
+        <span class="section__name">Другие развлечения</span>
+        <div class="container__main">
+            <div class="entertainment__container" id="entertainment__container"></div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
