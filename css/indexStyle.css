@@ -235,7 +235,7 @@ html, body{
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: var(--headerColor1);
+        background-color: var(--headerAgainstColor);
         padding: 70px 10px 20px 10px;
         transition: all 0.3s ease-in-out 0s;
         text-align: center;
