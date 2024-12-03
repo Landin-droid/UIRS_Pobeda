@@ -278,6 +278,8 @@ html, body{
 }
 
 .main__content {
+    position: relative;
+    max-width: 100%;
     padding: 80px 0px 0px 0px;
     text-align: center;
     font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
