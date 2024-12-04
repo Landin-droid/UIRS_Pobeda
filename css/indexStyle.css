@@ -434,7 +434,7 @@ html, body{
     /* padding: 10px 0px 0px 10px; */
     .book__promo-card__title{
         font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-        margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));;
+        margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
     }
 }
 .book__promo-card__title,
@@ -490,4 +490,117 @@ html, body{
     max-width: 100%;
     border: var(--palitraGreen2Color) 3px solid;
     border-radius: 20px;
+}
+
+/*Сектор проката*/
+.rent__container__body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--palitraBlue5Color);
+    border-radius: 20px;
+    border: 2px solid var(--palitraGreen2Color);
+}
+.rent__body__content{
+    display: grid;
+    grid-template-rows: 1fr .2fr;
+    .rent__title{
+        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+        margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    }
+}
+.rent__body__content__inner{
+    align-self: center;
+}
+.rent__items li{
+    list-style: none;
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__items li:nth-child(1)::before{
+    content:"⛸️";
+    margin-right: 1vw;
+}
+.rent__items li:nth-child(2)::before{
+    content: "🎿";
+    margin-right: 1vw;
+}
+.rent__items li:nth-child(3)::before{
+    content:"🥯";
+    margin-right: 1vw;
+}
+.rent__items li:nth-child(4)::before{
+    content: "🛷";
+    margin-right: 1vw;
+}
+.rent__title,
+.rent__items,
+.rent__info{
+    text-align: start;
+    padding-left: calc(6px + (6 - 2) * ((100vw - 320px) / (1440 - 320)));
+    padding-top: calc(6px + (6 - 2) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(6px + (6 - 2) * ((100vw - 320px) / (1440 - 320)));
+    padding-bottom: calc(6px + (6 - 2) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__info{
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+}
+.rent__btn__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.move__to__rent__btn{
+    align-self: center;
+    margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+    padding: calc(6px + (6 - 2) * ((100vw - 320px) / (1440 - 320)));
+    background: linear-gradient(to bottom right, #97ff48, #00b7a8);
+    border-radius: 20px;
+    border: var(--palitraGreen1Color) 2px solid;
+    a{
+        color: black;
+        text-decoration: none;
+        font-size: calc(17px + (25 - 17) * ((100vw - 320px) / (1440 - 320)));
+    }
+}
+.move__to__rent__btn:hover{
+    box-shadow: 0px 0px 5px rgb(145, 255, 0);
+    transform: scale(1.05);
+}
+.rent__images{
+    display: grid;
+    justify-self: center;
+    grid-template-columns: calc(150px + (280 - 150) * ((100vw - 320px) / (1440 - 320))) 
+                            calc(150px + (280 - 150) * ((100vw - 320px) / (1440 - 320)));
+    grid-template-rows: calc(150px + (280 - 150) * ((100vw - 320px) / (1440 - 320))) 
+                        calc(150px + (280 - 150) * ((100vw - 320px) / (1440 - 320)));
+    column-gap: calc(3px + (10 - 3) * ((100vw - 320px) / (1440 - 320)));
+    row-gap: calc(3px + (10 - 3) * ((100vw - 320px) / (1440 - 320)));
+    padding: calc(5px + (12 - 5) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__images img{
+    display: block;
+    width: calc(150px + (280 - 150) * ((100vw - 320px) / (1440 - 320)));
+    object-fit: cover;
+    height: calc(150px + (280 - 150) * ((100vw - 320px) / (1440 - 320)));
+    border: var(--palitraGreen2Color) 3px solid;
+    border-radius: 20px;
+}
+@media (max-width: 1090px){
+    .rent__container__body{
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+    .rent__images{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
+}
+@media (max-width: 360px){
+    .rent__images{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
 }
