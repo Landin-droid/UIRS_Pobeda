@@ -258,7 +258,42 @@
 
         <span class="section__name">Другие развлечения</span>
         <div class="container__main">
-            <div class="entertainment__container" id="entertainment__container"></div>
+            <div class="entertainment__container" id="entertainment__container">
+                <div class="entertainment__body__content">
+                    <div class="entertainment__content__inner">
+                        <div class="entertainment__inner__title">Также на базе отдыха летом появляются следующие виды развлечений:</div>
+                        <form action="" class="choice__entertainment__places" autocomplete="off">
+                            <div class="grid__row__entertainment">
+                                <input type="radio" id="trampolines" name="entertainment__place" value="Батуты" onclick="showImage('image1')" checked>
+                                <label for="trampolines" class="label__entertainment1">Батуты</label>
+                            </div>
+                            <div class="grid__row__entertainment">
+                                <input type="radio" id="volleyball_square" name="entertainment__place" value="Волейбольное поле" onclick="showImage('image2')">
+                                <label for="volleyball_square" class="label__entertainment2">Волейбольное поле</label>
+                            </div>
+                            <div class="grid__row__entertainment">
+                                <input type="radio" id="playground" name="entertainment__place" value="Детская площадка" onclick="showImage('image3')">
+                                <label for="playground" class="label__entertainment3">Детская площадка</label>
+                            </div>
+                            <div class="grid__row__entertainment">
+                                <input type="radio" id="paintball" name="entertainment__place" value="Пейнтбол" onclick="showImage('image4')">
+                                <label for="paintball" class="label__entertainment4">Пейнтбол</label>
+                            </div>
+                            <div class="grid__row__entertainment">
+                                <input type="radio" id="strikeball" name="entertainment__place" value="Страйкбол" onclick="showImage('image5')">
+                                <label for="strikeball" class="label__entertainment5">Страйкбол</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="entertainment__images">
+                        <img id="img1" src="./images/Живые фото/forCarousel6.jpeg" alt="" class="entertainment__photos photo1">
+                        <img id="img2" src="./images/Живые фото/Шатер3.jpeg" alt="" class="entertainment__photos photo2">
+                        <img id="img3" src="./images/Живые фото/forCarousel1.jpeg" alt="" class="entertainment__photos photo3">
+                        <img id="img4" src="./images/Пейнтбол.webp" alt="" class="entertainment__photos photo4">
+                        <img id="img5" src="./images/Страйкбол.webp" alt="" class="entertainment__photos photo5">
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer></footer>

@@ -35,3 +35,18 @@ document.addEventListener('touchend', function(event) {
         event.target.classList.remove('feeling-touchy');
     }
 });
+
+/*Для переключателей */
+function showImage(imageId) {
+    // Скрыть все изображения
+    const images = document.querySelectorAll('.entertainment__images img');
+    images.forEach(img => {
+        img.style.display = "none";
+    });
+  
+    // Показать выбранное изображение
+    const selectedImage = document.getElementById(imageId.replace('image', 'img'));
+    if (selectedImage) {
+        selectedImage.style.display = "block";
+    }
+}

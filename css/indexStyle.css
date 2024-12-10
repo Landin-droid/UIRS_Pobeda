@@ -759,3 +759,75 @@ html, body{
     border: var(--palitraGreen2Color) 3px solid;
     border-radius: 20px;
 }
+
+/*Секция развлечений*/
+.entertainment__body__content{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color: var(--palitraBlue5Color);
+    border: 2px solid var(--palitraGreen2Color);
+    border-radius: 20px;
+}
+@media (max-width: 1090px){
+    .entertainment__body__content{
+        grid-template-columns: 1fr;
+    }
+}
+.entertainment__content__inner{
+    align-self: center;
+}
+input[type="radio"]{
+    transform: scale(1.5);
+    accent-color: var(--palitraGreen1Color);
+}
+.entertainment__inner__title{
+    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
+}
+.choice__entertainment__places,
+.entertainment__inner__title{
+    padding: calc(6px + (15 - 6) * ((100vw - 320px) / (1440 - 320)));
+}
+.grid__row__entertainment{
+    font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(3px + (10 - 3) * ((100vw - 320px) / (1440 - 320)));
+}
+.label__entertainment1::before{
+    content: "🤸";
+}
+.label__entertainment2::before{
+    content: "🏐";
+}
+.label__entertainment3::before{
+    content: "🎡";
+}
+.label__entertainment4::before{
+    content: "🎯";
+}
+.label__entertainment5::before{
+    content: "🔫";
+}
+.entertainment__images{
+    padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+    display: flex;
+    justify-content: center;
+}
+.entertainment__images img{
+    display: none;
+    object-fit: cover;
+    width: calc(271.6px + (753.725 - 271.6) * ((100vw - 320px) / (1440 - 320)));
+    height: calc(154.875px + (426.075 - 154.875) * ((100vw - 320px) / (1440 - 320)));
+    border: var(--palitraGreen2Color) 3px solid;
+    border-radius: 20px;
+}
+@media (max-width: 1090px){
+    .entertainment__images img{
+        width: 100%;
+        height: 100%;
+    }
+    .entertainment__images{
+        display: block;
+    }
+}
+.entertainment__images img:nth-child(1){
+    display: block;
+}
