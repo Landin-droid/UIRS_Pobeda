@@ -793,18 +793,33 @@ input[type="radio"]{
 }
 .label__entertainment1::before{
     content: "🤸";
+    margin-left: calc(1px + (5 - 1) * ((100vw - 320px) / (1440 - 320)));
+    margin-right: calc(2px + (5 - 2) * ((100vw - 320px) / (1440 - 320)));
 }
 .label__entertainment2::before{
     content: "🏐";
+    margin-left: calc(1px + (5 - 1) * ((100vw - 320px) / (1440 - 320)));
+    margin-right: calc(2px + (5 - 2) * ((100vw - 320px) / (1440 - 320)));
 }
 .label__entertainment3::before{
     content: "🎡";
+    margin-left: calc(1px + (5 - 1) * ((100vw - 320px) / (1440 - 320)));
+    margin-right: calc(2px + (5 - 2) * ((100vw - 320px) / (1440 - 320)));
 }
 .label__entertainment4::before{
     content: "🎯";
+    margin-left: calc(1px + (5 - 1) * ((100vw - 320px) / (1440 - 320)));
+    margin-right: calc(2px + (5 - 2) * ((100vw - 320px) / (1440 - 320)));
 }
 .label__entertainment5::before{
     content: "🔫";
+    margin-left: calc(1px + (5 - 1) * ((100vw - 320px) / (1440 - 320)));
+    margin-right: calc(2px + (5 - 2) * ((100vw - 320px) / (1440 - 320)));
+}
+@media (max-width: 768px){
+    input[type="radio"]{
+        transform: scale(1.1);
+    }
 }
 .entertainment__images{
     padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
