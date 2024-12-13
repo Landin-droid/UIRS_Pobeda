@@ -387,13 +387,13 @@ body{
 .rent-item {
     margin: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
     padding: calc(7px + (15 - 7) * ((100vw - 320px) / (1440 - 320)));
-    border-radius: 10px;
+    border-radius: 20px;
     max-width: 350px;
     max-height: 530px;
     background-color: var(--palitraBlue5Color);
     border: 2px solid var(--palitraGreen2Color);
 }
-@media (min-width: 1560px){
+@media ((min-width: 1560px) and (max-width: 2560px)){
     .rent-item {
         max-width: 550px;
         max-height: 650px;
@@ -401,7 +401,7 @@ body{
 }
 .rent-image{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 50%;
 }
 .rent-image + h2{
