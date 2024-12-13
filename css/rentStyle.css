@@ -289,15 +289,204 @@ body{
     }
 }
 .main__content {
-    padding: 80px 0px 0px 0px;
-    text-align: center;
-    font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
+    padding: 70px 0px 0px 0px;
+    /* font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320))); */
     margin: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320))) 0;
 }
 @media (max-width: 1090px) {
     .main__content{
         padding: 50px 0px 0px 0px;
     }
+}
+
+/*Прокат*/
+.rent__conditionals__container,
+.rent__conditionals__items,
+.rent__title,
+.rent__timetable{
+    display: flex;
+}
+.rent__conditionals__container{
+    flex-direction: column;
+    background-color: var(--palitraBlue5Color);
+    border-radius: 20px;
+    border: 2px solid var(--palitraGreen2Color);
+}
+.rent__conditionals__items{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1440 - 320)));
+    padding-top: calc(15px + (25 - 15) * ((100vw - 320px) / (1440 - 320)));
+    padding-left:calc(15px + (25 - 15) * ((100vw - 320px) / (1440 - 320)));
+    padding-right:calc(15px + (25 - 15) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__title,
+.rent__timetable{
+    align-self: center;
+    font-weight: bold;
+}
+.rent__title{
+    font-size: calc(17px + (34 - 17) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(7px + (12 - 7) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__timetable{
+    font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__rules__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
+}
+@media (max-width: 425px){
+    .rent__rules__container{
+        grid-template-columns: 1fr
+    }
+}
+.rent__rules__left,
+.rent__rules__left__inner,
+.rent__rules__right,
+.rent__rules__right__inner{
+    display: flex;
+    flex-direction: column;
+}
+.rent__inner{
+    font-size: calc(13px + (22 - 13) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(12px + (18 - 12) * ((100vw - 320px) / (1440 - 320)));
+    padding-left: calc(12px + (18 - 12) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(12px + (18 - 12) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__list{
+    font-size: calc(13px + (22 - 13) * ((100vw - 320px) / (1440 - 320)));
+    border-radius: 20px;
+    border: 2px solid var(--palitraGreen2Color);
+    background-color: var(--palitraBlue5Color);
+    padding-left: calc(12px + (30 - 12) * ((100vw - 320px) / (1440 - 320)));
+    margin-left: calc(12px + (38 - 12) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(12px + (20 - 12) * ((100vw - 320px) / (1440 - 320)));
+    margin-right: calc(12px + (38 - 12) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__list li{
+    list-style: disc;
+    margin-bottom: calc(5px + (8 - 5) * ((100vw - 320px) / (1440 - 320)));
+    margin-left: calc(10px + (15 - 10) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__list li:first-child{
+    padding-top: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+}
+
+/*Рента инвентаря*/
+.container-rent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+}
+.rent-item {
+    margin: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    padding: calc(7px + (15 - 7) * ((100vw - 320px) / (1440 - 320)));
+    border-radius: 10px;
+    max-width: 350px;
+    max-height: 530px;
+    background-color: var(--palitraBlue5Color);
+    border: 2px solid var(--palitraGreen2Color);
+}
+.rent-image{
+    width: 100%;
+    border-radius: 10px;
+    height: 50%;
+}
+.rent-image + h2{
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent__text__description{
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent-info.skates{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.rent-info.ski {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.rent-cost, .rent-time, .rent-self,
+.rent-man, .rent-litman, .rent-road{
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-top: calc(3px + (7 - 3) * ((100vw - 320px) / (1440 - 320)));
+}
+.rent-road{
+    border-right: 1px solid black;
+}
+
+.skates-ruble, .skates-time, .skates-check,
+.ski-ruble, .ski-time, .ski-check,
+.snowwalk-man, .snowwalk-road, .snowwalk-ruble,
+.tube1-ruble, .tube1-time, .tube1-check, 
+.tube2-ruble, .tube2-time, .tube2-check,
+.tube3-ruble, .tube3-time, .tube3-check{
+    border-bottom: 5px solid black;
+    text-align: center;
+}
+.rent-info.snowwalk{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.rent-info.tube1, .rent-info.tube2, .rent-info.tube3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.rent-man{
+    grid-row: 2 / 4;
+    align-content: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.rent-litman{
+    grid-row: 4 / 6;
+    align-content: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.img-ruble, .img-time, .img-check, 
+.img-person, .img-road{
+    height: calc(25px + (30 - 25) * ((100vw - 320px) / (1440 - 320)));;
+    width: calc(25px + (30 - 25) * ((100vw - 320px) / (1440 - 320)));;
+    padding-bottom: 5px;
+}
+
+.cost, .time, .rentness,
+.road,  .man-name{
+    font-weight: bold;
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1440 - 320)));
+}
+.time__infinity{
+    font-size: calc(19px + (25 - 19) * ((100vw - 320px) / (1440 - 320)));
+}
+img > h2{
+    color: black !important;
+    font-weight: bold;
+}
+
+.rent-item p{
+    font-weight: 700;
 }
 
 /*Подвал сайта*/

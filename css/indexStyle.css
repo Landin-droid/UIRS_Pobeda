@@ -901,6 +901,9 @@ input[type="radio"]{
 .footer__contacts-item{
     display: flex;
 }
+.footer__contacts-item--email{
+    flex-direction: row;
+}
 .footer__contacts-address-container{
     color: var(--whiteColor);
     padding-top: calc(6px + (15 - 6) * ((100vw - 320px) / (1440 - 320)));
