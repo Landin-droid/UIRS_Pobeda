@@ -393,6 +393,12 @@ body{
     background-color: var(--palitraBlue5Color);
     border: 2px solid var(--palitraGreen2Color);
 }
+@media (min-width: 1560px){
+    .rent-item {
+        max-width: 550px;
+        max-height: 650px;
+    }
+}
 .rent-image{
     width: 100%;
     border-radius: 10px;
