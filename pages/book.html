@@ -11,6 +11,7 @@
     crossorigin="anonymous"></script>
 
     <script src="../js/indexJS.js"></script>
+    <script src="../js/booking.js"></script>
 
     <link rel="icon" type="image/png" href="../forFavicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../forFavicon/favicon.svg" />
@@ -58,9 +59,46 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="main__content">
-            Страница бронирования
+    <main class="main__content">
+        <div class="container__main">
+            <div class="booking-container">
+                <h1>Бронирование</h1>
+                <form id="booking-form">
+                    <!-- Выбор типа -->
+                    <label for="type">Выберите тип бронирования:</label>
+                    <select id="type" name="type">
+                        <option value="cottage">Домик</option>
+                        <option value="gazebo">Беседка</option>
+                        <option value="tent">Шатер</option>
+                        <option value="hall">Банкетный зал</option>
+                    </select>
+        
+                    <!-- Выбор объекта -->
+                    <div id="object-container">
+                        <label for="object">Выберите объект:</label>
+                        <select id="object" name="object"></select>
+                    </div>
+        
+                    <!-- Выбор даты -->
+                    <label for="date">Дата бронирования:</label>
+                    <input type="date" id="date" name="date" required>
+        
+                    <!-- Количество человек -->
+                    <label for="people">Количество человек:</label>
+                    <input type="number" id="people" name="people" min="1" max="50" value="1" required>
+        
+                    <!-- Способ оплаты -->
+                    <label for="payment">Способ оплаты:</label>
+                    <select id="payment" name="payment">
+                        <option value="card">Карта</option>
+                        <option value="quick-online">СБП</option>
+                    </select>
+        
+                    <!-- Кнопка перехода к оплате -->
+                    <button type="submit" id="submit-button">Перейти к оплате</button>
+                </form>
+            </div>
+            <div id="notification" class="hidden">Бронирование успешно отправлено!</div>
         </div>
     </main>
     <footer class="footer">
