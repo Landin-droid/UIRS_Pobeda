@@ -98,6 +98,7 @@ body{
 }
 .grid__works {
     display: grid;
+    line-height: normal;
     grid-template-rows: 1fr 1fr;
     gap: 5px;
     z-index: 2;
@@ -123,6 +124,8 @@ body{
     display: none;
 }
 .header__list {
+    margin: 0;
+    padding: 0;
     display: flex;
     position: relative;
     z-index: 2;
@@ -299,7 +302,7 @@ body{
 /*Часть бронирования*/
 .booking-container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 30px;
     background: #fff;
     overflow: hidden;
@@ -369,6 +372,203 @@ form button:hover {
 .hidden{
     display: none;
 }
+
+/*Карточки всего*/
+
+@counter-style marker-services1 {
+    system: fixed;
+    symbols: "💰" "🧍‍♂️" "💧" "💡";
+    suffix: " ";
+}
+
+@counter-style marker-services2 {
+    system: fixed;
+    symbols: "🚽" "" "" "";
+    suffix: " ";
+}
+
+/* @keyframes appearHouse{
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+} */
+.section__name{
+    display: block;
+    font-size: calc(22px + (36 - 22)*((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    background-color: var(--palitraGreen1Color);
+    padding: 20px;
+    color: var(--whiteColor);
+    text-shadow: 2px 2px 2px black;
+    border-radius: 20px;
+}
+.house-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: appearHouse linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@media (max-width: 1090px){
+    .house-card{
+        grid-template-columns: 1fr;
+    }
+}
+/* Для галереи изображений */
+.carousel-inner{
+    border-radius: 20px;
+    width: 100%;
+}
+.carousel-item{
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item > img{
+    border-radius: 20px;
+    width: 100%;
+}
+  
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    height: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+    width: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
+}
+  
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(49, 49, 49, 0.2);
+    border-radius: 20px;
+}
+
+/* Карточка домика */
+.text-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 500px){
+    .text-about{
+        grid-template-columns: 1fr;
+    }
+}
+ul.chars1 {
+    list-style-type: marker-services1;
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1440 - 320)));
+    margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+}
+ul.chars2 {
+    list-style-type: marker-services2;
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1440 - 320)));
+    margin-left: calc(18px + (20 - 18) * ((100vw - 320px) / (1440 - 320)));
+}
+
+.facility.teapot {
+    list-style-image: url(../images/teapotMarker.png);
+}
+
+.facility.fridge {
+    list-style-image: url(../images/fridgeMarker.png);
+}
+
+.facility.microwave {
+    list-style-image: url(../images/microwaveMarker.png);
+}
+
+.facility{
+    font-weight: 600;
+}
+
+.btn-container {
+    text-align: center;
+}
+.btn-book {
+    display: inline-block;
+    border: none;
+    outline: none;
+    appearance: none;
+    position: relative;
+    z-index: 3;
+    height: calc(40px + (60 - 40) * ((100vw - 320px) / (1440 - 320)));
+    border-radius: 30px;
+    padding: 0 21px;
+    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    box-shadow: 1px 1px 1px 0 black;
+}
+.btn-book:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    z-index: -2;
+    border-radius: 30px;
+    background: rgb(255, 218, 8);
+}
+
+.btn-book:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #78ff52 0%, #006651 100%);
+}
+
+.btn-book:active {
+    box-shadow: 0px 0px 0px 0 black;
+}
+
+/* Банкетный зал */
+.right-title {
+    text-align: center;
+}
+
+.banket-info p{
+    font-weight: 600;
+    font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (1440 - 320)));;
+}
+
+.carousel-container.banket {
+    align-self: center;
+}
+
+/* Шатер */
+.carousel-container.shatr {
+    align-self: center;
+}
+
+/* Беседки */
+@counter-style marker-pavilion {
+    system: fixed;
+    symbols: "💰" "🧍‍♂️" "🔌" "🍖";
+    suffix: " ";
+}
+
+ul.charsPav {
+    list-style-type: marker-pavilion;
+    font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (1440 - 320)));
+    margin-left: 20px;
+}
+
+.facility.bbq {
+    list-style-image: url(../images/bbqMarker.png);
+}
+
+.text-about > p {
+    font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+
 /*Подвал сайта*/
 .footer{
     flex-shrink: 0;
