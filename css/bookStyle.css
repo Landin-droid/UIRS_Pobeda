@@ -353,7 +353,6 @@ form button:hover {
 /* Стили для уведомления */
 #notification {
     position: fixed;
-    /* bottom: 20px; */
     right: 20px;
     top: 100px;
     background-color: #28a745;
@@ -364,6 +363,7 @@ form button:hover {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s, transform 0.3s;
+    z-index: 9999;
 }
 #notification.show {
     opacity: 1;

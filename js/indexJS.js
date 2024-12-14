@@ -14,6 +14,7 @@ document.addEventListener('touchend', function(event) {
         event.target.classList.remove('feeling-touchy');
     }
 });
+
 // document.addEventListener("scroll", () => {
 //     const header = document.querySelector(".header");
 //     const scrollPosition = window.scrollY;
