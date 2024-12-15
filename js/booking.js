@@ -5,7 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const timeFromSelect = document.getElementById("time-from");
     const timeToSelect = document.getElementById("time-to");
     const bookingFormContainer = document.getElementById("booking-form-container");
-
+    
+    window.onbeforeunload = function (evt) {
+        var message = "Document 'foo' is not saved. You will lost the changes if you leave the page.";
+        if (typeof evt == "undefined") {
+            evt = window.event;
+        }
+        if (evt) {
+            evt.returnValue = message;
+        }
+        return message;
+    }
     // Список объектов для каждого типа
     const objects = {
         cottage: ["Домик 1", "Домик 2", "Домик 3", "Домик 4", "Домик 6", "Домик 7"],

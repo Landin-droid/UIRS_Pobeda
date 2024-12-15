@@ -98,6 +98,7 @@ body{
 }
 .grid__works {
     display: grid;
+    line-height: normal; /*Меняем из-за bootstrap*/
     grid-template-rows: 1fr 1fr;
     gap: 5px;
     z-index: 2;
@@ -123,6 +124,8 @@ body{
     display: none;
 }
 .header__list {
+    margin: 0; /*Меняем из-за bootstrap*/
+    padding: 0; /*Меняем из-за bootstrap*/
     display: flex;
     position: relative;
     z-index: 2;
