@@ -2,11 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingForm = document.getElementById("booking-form");
     const typeSelect = document.getElementById("type");
     const objectSelect = document.getElementById("object");
+    const timeFromSelect = document.getElementById("time-from");
+    const timeToSelect = document.getElementById("time-to");
     const bookingFormContainer = document.getElementById("booking-form-container");
 
     // Список объектов для каждого типа
     const objects = {
-        cottage: ["Домик 1", "Домик 2", "Домик 3", "Домик 4", "Домик 5", "Домик 6", "Домик 7"],
+        cottage: ["Домик 1", "Домик 2", "Домик 3", "Домик 4", "Домик 6", "Домик 7"],
         gazebo: ["Беседка 1", "Беседка 2", "Беседка 3", "Беседка 4", "Беседка 5", "Беседка 6", "Беседка 7"],
         tent: ["Шатер"],
         hall: ["Банкетный зал"]
@@ -41,6 +43,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    function populateTimeOptions() {
+        const startHour = 9; // Начало рабочего времени
+        const endHour = 23; // Конец рабочего времени
+
+        for (let hour = startHour; hour <= endHour; hour++) {
+            const time = `${hour.toString().padStart(2, '0')}:00`;
+            const optionFrom = document.createElement("option");
+            const optionTo = document.createElement("option");
+
+            optionFrom.value = time;
+            optionFrom.textContent = time;
+            timeFromSelect.appendChild(optionFrom);
+
+            optionTo.value = time;
+            optionTo.textContent = time;
+            timeToSelect.appendChild(optionTo);
+        }
+    }
+
+    // Обновление времени "до" при изменении "от"
+    timeFromSelect.addEventListener("change", () => {
+        const selectedTimeFrom = timeFromSelect.value;
+        const selectedHour = parseInt(selectedTimeFrom.split(":")[0], 10);
+
+        // Очищаем список "до"
+        timeToSelect.innerHTML = "";
+
+        for (let hour = selectedHour + 1; hour <= 23; hour++) {
+            const time = `${hour.toString().padStart(2, '0')}:00`;
+            const optionTo = document.createElement("option");
+            optionTo.value = time;
+            optionTo.textContent = time;
+            timeToSelect.appendChild(optionTo);
+        }
+    });
+
+    // Инициализация времени
+    populateTimeOptions();
+    
     // При изменении типа обновляем список объектов
     typeSelect.addEventListener("change", () => {
         const selectedType = typeSelect.value;
