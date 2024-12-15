@@ -292,12 +292,12 @@ body{
     }
 }
 .main__content {
-    padding: 80px 0px 0px 0px;
-    margin: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
+    padding: 90px 0px 0px 0px;
+    margin: 0 calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
 }
 @media (max-width: 1090px) {
     .main__content{
-        padding: 50px 0px 0px 0px;
+        padding: 60 0px 0px 0px;
     }
 }
 /*Кафе главная*/

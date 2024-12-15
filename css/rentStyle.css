@@ -292,13 +292,12 @@ body{
     }
 }
 .main__content {
-    padding: 70px 0px 0px 0px;
-    /* font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320))); */
-    margin: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320))) 0;
+    padding: 90px 0px 0px 0px;
+    margin: 0 calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
 }
 @media (max-width: 1090px) {
     .main__content{
-        padding: 50px 0px 0px 0px;
+        padding: 60px 0px 0px 0px;
     }
 }
 
