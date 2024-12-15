@@ -355,7 +355,7 @@ form button:hover {
 #notification {
     position: fixed;
     right: 20px;
-    top: 100px;
+    bottom: 100px;
     background-color: #28a745;
     color: #fff;
     padding: 15px 20px;
