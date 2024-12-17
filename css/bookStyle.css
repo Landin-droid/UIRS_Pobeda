@@ -312,7 +312,11 @@ body{
     border: 2px solid var(--palitraGreen2Color);
     background-color: var(--palitraBlue5Color);
 }
-
+#price-display{
+    font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: bold;
+    text-align: center;
+}
 h1 {
     text-align: center;
     margin-bottom: 20px;

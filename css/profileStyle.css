@@ -292,26 +292,104 @@ body{
     }
 }
 .main__content {
-    padding: 80px 0px 0px 0px;
-    text-align: center;
-    font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
-    margin: calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320))) 0;
+    padding: 90px 0px 0px 0px;
+    margin: 0 calc(17px + (30 - 17) * ((100vw - 320px) / (1440 - 320)));
 }
 @media (max-width: 1090px) {
     .main__content{
-        padding: 50px 0px 0px 0px;
+        padding: 60px 0px 0px 0px;
     }
 }
+/*Главная*/
+h2, h3 {
+    color: #000000;
+}
+.welcome-h2{
+    margin-bottom: 5px;
+}
+.hidden {
+    display: none;
+}
+.booking__container{
+    margin-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1440 - 320)));
+    margin-bottom: 5px;
+    background-color: var(--palitraBlue5Color);
+    border-radius: 20px;
+    border: 2px solid var(--palitraGreen2Color);
+    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+}
+#bookings-list{
+    list-style-position: inside;
+}
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3dab3d;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: #000000 2px solid;
+    font-weight: bold;
+}
 
+.btn-delete {
+    background-color: #d9534f;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#bookings-list li {
+    margin: 5px 0;
+}
+.edit-title-h3{
+    margin-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1440 - 320)));
+}
+.show-register,
+.show-login{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    background-color: var(--palitraBlue5Color);
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--palitraGreen2Color);
+}
+@media (max-width: 330px){
+    .show-register,
+    .show-login{
+        margin-top: 10px;
+    }
+}
+.show-register:hover,
+.show-login:hover{
+    color: #6f6f6f;
+    cursor: pointer;
+}
+.login-no-account-p,
+.register-no-account-p{
+    font-size: 18px;
+    color: #000000;
+    margin-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1440 - 320)));
+}
 /*Подвал сайта*/
 .footer{
     flex-shrink: 0;
     background-color: var(--palitraGreen1Color);
-    /* padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))); */
 }
 .container__main{
     max-width: 100vw;
-    margin: 1vh 3vw 1vh 3vw;
+    margin: 1vh 3vw 5vh 3vw;
     padding: 0px 2vw;
 }
 .footer__container{

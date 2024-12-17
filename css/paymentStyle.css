@@ -1,0 +1,64 @@
+:root{
+    --headerColor1: rgba(168, 213, 186, 1);
+    --headerColor2: rgba(107, 142, 35, 1);
+    --headerColor1Trans: rgba(168, 213, 186, .5);
+    --headerColor2Trans: rgba(107, 142, 35, .5);
+    --headerAgainstColor: rgba(162, 191, 200, 1);
+    --headerAgainstColorTrans: rgba(162, 191, 200, .5);
+    --accentColor1: rgba(255, 165, 0, 1);
+    --accentColor2: rgba(255, 215, 0, 1);
+    --extraColor: rgba(250, 243, 224, 1);
+    --extraColor2: rgba(93, 64, 55, 1);
+    --blackColor: rgba(0, 0, 0, 1);
+    --whiteColor: rgba(255, 255, 255, 1);
+
+    --palitraGreen1Color: #24724c;
+    --palitraGreen2Color: #458d72;
+    --palitraGreen3Color: #6faea0;
+    --palitraGreen4Color: #009999;
+    --palitraGreen5Color: #00aa72;
+    --palitraBlue1Color: #75a0d7;
+    --palitraBlue2Color: #597aa3;
+    --palitraBlue3Color: #8abdff;
+    --palitraBlue4Color: #3c9dd0;
+    --palitraBlue5Color: #64aad0;
+
+}
+.hidden {
+    display: none;
+}
+
+.payment-container {
+    justify-self: center;
+    max-width: 400px;
+    margin: 15px 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#pay-button{
+    margin-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1440 - 320)));
+    background-color: rgb(255, 218, 8);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#pay-button:hover{
+    background-color: rgb(255, 229, 80);
+}
+#pay-button:active{
+    background-color: rgb(200, 170, 0);
+}

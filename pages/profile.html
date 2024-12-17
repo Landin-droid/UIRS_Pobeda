@@ -10,8 +10,6 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
     crossorigin="anonymous"></script>
     
-    <script src="../js/indexJS.js"></script>
-    
     <link rel="icon" type="image/png" href="../forFavicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../forFavicon/favicon.svg" />
     <link rel="shortcut icon" href="../forFavicon/favicon.ico" />
@@ -58,9 +56,56 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="main__content">
-            Страница личного кабинета
+    <main class="main__content">
+        <div class="container__main">
+            <div id="login-form">
+                <h2>Вход</h2>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Пароль">
+                <button id="login-btn" class="btn">Войти</button>
+                <p class="login-no-account-p">Нет аккаунта?
+                    <a href="#" id="show-register"><button class="show-register">Зарегистрироваться</button></a>
+                </p>
+            </div>
+        
+            <!-- Форма регистрации -->
+            <div id="register-form" class="hidden">
+                <h2>Регистрация</h2>
+                <input type="text" id="register-name" placeholder="Имя">
+                <input type="email" id="register-email" placeholder="Email">
+                <input type="password" id="register-password" placeholder="Пароль">
+                <button id="register-btn" class="btn">Зарегистрироваться</button>
+                <p class="register-no-account-p">Уже есть аккаунт? 
+                    <a href="#" id="show-login"><button class="show-login">Войти</button></a></p>
+            </div>
+        
+            <!-- Личный кабинет -->
+            <div id="welcome" class="hidden">
+                <h2 class="welcome-h2">Добро пожаловать, <span id="user-name">Пользователь</span>!</h2>
+                <p class="email-welcome">Ваш email: <span id="user-email"></span></p>
+                
+                <button id="edit-profile-btn" class="btn">Редактировать профиль</button>
+                <div id="edit-profile-form" class="hidden">
+                    <h3 class="edit-title-h3">Редактировать профиль</h3>
+                    <input type="text" id="edit-name" placeholder="Имя">
+                    <input type="email" id="edit-email" placeholder="Email">
+                    <button id="save-profile-btn" class="btn">Сохранить изменения</button>
+                </div>
+                
+                <div class="booking__container">
+                    <h3>Ваши бронирования:</h3>
+                    <ul id="bookings-list">
+                        <!-- Список бронирований -->
+                    </ul>
+                    <h3 id="total-sum">Итоговая сумма: 0 руб.</h3>
+                </div>
+                <!-- Кнопка перехода к оплате -->
+                <button id="pay-button" class="btn" class="hidden">Перейти к оплате</button>
+                <!-- Новая кнопка для перехода -->
+                <button id="booking-page-btn" class="btn">Перейти к бронированию</button>
+        
+                <button id="logout-btn" class="btn">Выйти</button>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -159,5 +204,8 @@
             </div>
         </div>
     </footer>
+    <script src="../js/indexJS.js"></script>
+    <script src="../js/book&profile.js"></script>
+    <script src="../js/profile.js"></script>
 </body>
 </html>
