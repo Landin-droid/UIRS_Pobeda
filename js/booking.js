@@ -243,3 +243,32 @@ document.addEventListener("DOMContentLoaded", () => {
     updateObjectOptions(initialType);
 });
 
+// document.getElementById("booking-form").addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     // Получаем данные из формы
+//     const type = document.getElementById("type").value;
+//     const object = document.getElementById("object").value;
+//     const date = document.getElementById("date").value;
+//     const timeFrom = document.getElementById("time-from").value;
+//     const timeTo = document.getElementById("time-to").value;
+//     const people = document.getElementById("people").value;
+//     const price = document.getElementById("booking-form").dataset.price;
+
+//     // Создаём новое бронирование
+//     const newBooking = {
+//         type,
+//         object,
+//         date,
+//         timeFrom,
+//         timeTo,
+//         people,
+//         price,
+//         status: "Не оплачено"
+//     };
+
+//     // Добавляем бронирование в localStorage
+//     const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+//     bookings.push(newBooking);
+//     localStorage.setItem("bookings", JSON.stringify(bookings));
+// });

@@ -43,19 +43,18 @@ function updateBookings() {
     } else {
         bookings.forEach((booking, index) => {
             const listItem = document.createElement("li");
-            const status = booking.status === "оплачено" ? " (Оплачено)" : "";
             listItem.textContent = `${booking.object} 
-            (с ${booking.timeFrom} до ${booking.timeTo}, ${booking.date}), Людей: ${booking.people}, Цена: ${booking.price} ${status}`;
+            (с ${booking.timeFrom} до ${booking.timeTo}, ${booking.date}), Людей: ${booking.people}
+            , Цена: ${booking.price} Статус: ${booking.status || "Не оплачено"}`;
 
             const deleteBtn = document.createElement("button");
             deleteBtn.textContent = "Отменить";
             deleteBtn.classList.add("btn", "btn-delete");
             deleteBtn.addEventListener("click", () => deleteBooking(index));
-
             listItem.appendChild(deleteBtn);
             bookingsList.appendChild(listItem);
 
-            if (!booking.status || booking.status !== "оплачено") {
+            if (!booking.status || booking.status !== "Оплачено") {
                 totalSum += parseInt(booking.price);
             }
             // Обработчик для кнопки "Оплатить"
@@ -70,6 +69,7 @@ function updateBookings() {
         } else {
             payButton.classList.add("hidden");
         }
+        localStorage.setItem("totalSum", totalSum);
     }
 }
 

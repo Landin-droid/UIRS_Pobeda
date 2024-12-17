@@ -56,6 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Имитация успешной оплаты
         paymentNotification.classList.remove("hidden");
 
+        // Удаляем только итоговую сумму из localStorage
+        localStorage.removeItem("totalSum");
+        
         // Устанавливаем статус бронирования как "оплачено"
         setTimeout(() => {
             markBookingsAsPaid();
@@ -69,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         bookings = bookings.map(booking => ({
             ...booking,
-            status: "оплачено"
+            status: "Оплачено"
         }));
 
         localStorage.setItem("bookings", JSON.stringify(bookings));
