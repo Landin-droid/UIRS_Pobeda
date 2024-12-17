@@ -26,7 +26,6 @@ const bookingPageBtn = document.getElementById("booking-page-btn");
 let user = JSON.parse(localStorage.getItem("user")) || {};
 let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 let isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
-let totalSum = 0;
 const payButton = document.getElementById("pay-button");
 
 // Обновление отображения бронирований
@@ -58,9 +57,12 @@ function updateBookings() {
 
             if (!booking.status || booking.status !== "оплачено") {
                 totalSum += parseInt(booking.price);
-            } else {
-                totalSum += parseInt(booking.price);
             }
+            // Обработчик для кнопки "Оплатить"
+            payButton.addEventListener("click", () => {
+                localStorage.setItem("totalSum", totalSum); // Сохраняем итоговую сумму
+                window.location.href = "payment.html"; // Переход на страницу оплаты
+            });
         });
         totalSumElement.textContent = `Итоговая сумма: ${totalSum} руб.`;
         if (totalSum > 0) {
@@ -178,12 +180,6 @@ saveProfileBtn.addEventListener("click", () => {
 // Переход на страницу бронирования
 bookingPageBtn.addEventListener("click", () => {
     window.location.href = "book.html";
-});
-
-// Обработчик для кнопки "Оплатить"
-payButton.addEventListener("click", () => {
-    localStorage.setItem("totalSum", totalSum); // Сохраняем итоговую сумму
-    window.location.href = "payment.html"; // Переход на страницу оплаты
 });
 
 // Инициализация
