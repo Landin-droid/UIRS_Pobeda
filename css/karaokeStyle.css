@@ -446,6 +446,11 @@ body{
     margin: 1vh 3vw 1vh 3vw;
     padding: 0px 2vw;
 }
+.container__main1{
+    max-width: 100vw;
+    margin: calc(6px + (10 - 6) * ((100vw - 320px) / (1440 - 320))) calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 calc(23px + (29 - 23) * ((100vw - 320px) / (1440 - 320)));
+}
 .footer__container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
