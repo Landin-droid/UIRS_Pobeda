@@ -59,7 +59,7 @@
     <main class="main__content">
         <div class="container__main">
             <div id="login-form">
-                <h2>Вход</h2>
+                <h2 class="forms-h2">Вход</h2>
                 <input type="email" id="login-email" placeholder="Email">
                 <input type="password" id="login-password" placeholder="Пароль">
                 <button id="login-btn" class="btn">Войти</button>
@@ -70,7 +70,7 @@
         
             <!-- Форма регистрации -->
             <div id="register-form" class="hidden">
-                <h2>Регистрация</h2>
+                <h2 class="forms-h2">Регистрация</h2>
                 <input type="text" id="register-name" placeholder="Имя">
                 <input type="email" id="register-email" placeholder="Email">
                 <input type="password" id="register-password" placeholder="Пароль">
@@ -81,23 +81,23 @@
         
             <!-- Личный кабинет -->
             <div id="welcome" class="hidden">
-                <h2 class="welcome-h2">Добро пожаловать, <span id="user-name">Пользователь</span>!</h2>
+                <h2 class="forms-h2">Добро пожаловать, <span id="user-name">Пользователь</span>!</h2>
                 <p class="email-welcome">Ваш email: <span id="user-email"></span></p>
                 
                 <button id="edit-profile-btn" class="btn">Редактировать профиль</button>
                 <div id="edit-profile-form" class="hidden">
-                    <h3 class="edit-title-h3">Редактировать профиль</h3>
+                    <h3 class="profile-h3 edit-title-h3">Редактировать профиль</h3>
                     <input type="text" id="edit-name" placeholder="Имя">
                     <input type="email" id="edit-email" placeholder="Email">
                     <button id="save-profile-btn" class="btn">Сохранить изменения</button>
                 </div>
                 
                 <div class="booking__container">
-                    <h3>Ваши бронирования:</h3>
+                    <h3 class="profile-h3">Ваши бронирования:</h3>
                     <ul id="bookings-list">
                         <!-- Список бронирований -->
                     </ul>
-                    <h3 id="total-sum">Итоговая сумма: 0 руб.</h3>
+                    <h3 class="profile-h3" id="total-sum">Итоговая сумма: 0 руб.</h3>
                 </div>
                 <!-- Кнопка перехода к оплате -->
                 <button id="pay-button" class="btn" class="hidden">Перейти к оплате</button>
