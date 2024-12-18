@@ -411,7 +411,9 @@ body{
 }
 .full__menu-btn{
     display: flex;
+    -o-display: flex;
     justify-self: center;
+    -o-justify-self: center;
     margin-bottom: calc(9px + (20 - 9) * ((100vw - 320px) / (1440 - 320)));
     padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1440 - 320)));
     background: linear-gradient(to bottom right, #97ff48, #00b7a8);
