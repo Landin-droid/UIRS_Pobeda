@@ -300,7 +300,7 @@ body{
 }
 @media (max-width: 1090px) {
     .main__content{
-        padding: 60 0px 0px 0px;
+        padding: 60px 0px 0px 0px;
     }
 }
 /*Кафе главная*/
@@ -541,4 +541,15 @@ body{
 }
 .text-official{
     white-space: nowrap;
+}
+
+@media (max-width: 600px){
+    .main__content,
+    .container__main1,
+    .container__main{
+        margin: 0;
+    }
+    .footer__payments{
+        margin-bottom: 10px;
+    }
 }

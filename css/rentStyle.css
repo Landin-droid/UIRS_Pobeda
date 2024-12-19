@@ -641,3 +641,14 @@ img > h2{
 .text-official{
     white-space: nowrap;
 }
+
+@media (max-width: 450px){
+    .main__content,
+    .container__main1,
+    .container__main{
+        margin: 0;
+    }
+    .footer__payments{
+        margin-bottom: 10px;
+    }
+}

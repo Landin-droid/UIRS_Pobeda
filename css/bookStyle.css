@@ -322,6 +322,8 @@ body{
 }
 .book-container-h1{
     text-align: center;
+    word-wrap: break-word;
+    font-size: calc(22px + (27 - 22) * ((100vw - 320px) / (1440 - 320)));
     margin-bottom: calc(15px + (20 - 15) * ((100vw - 320px) / (1440 - 320)));
 }
 
@@ -350,6 +352,7 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1440 - 320)));
+    word-wrap: break-word;
 }
 
 form button:hover {
@@ -717,4 +720,15 @@ ul.charsPav {
 }
 .text-official{
     white-space: nowrap;
+}
+
+@media (max-width: 450px){
+    .main__content,
+    .container__main1,
+    .container__main{
+        margin: 0;
+    }
+    .footer__payments{
+        margin-bottom: 10px;
+    }
 }

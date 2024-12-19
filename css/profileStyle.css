@@ -532,3 +532,17 @@ li{
 .text-official{
     white-space: nowrap;
 }
+
+@media (max-width: 600px){
+    .main__content,
+    .container__main1,
+    .container__main{
+        margin: 0;
+    }
+    .container__main1{
+        margin-bottom: 10px;
+    }
+    .footer__payments{
+        margin-bottom: 10px;
+    }
+}
