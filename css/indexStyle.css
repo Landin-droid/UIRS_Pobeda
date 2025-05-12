@@ -173,11 +173,9 @@ body{
 .slick-element.feeling-touchy{
     color: #99ff99;
 }
-.header__list li:hover{
+.header__list li a:hover{
     transition: all 0.2s normal 0s;
-    a{
-        color: #99ff99;
-    }
+    color: #99ff99;
 }
 .header__list li:active{
     border-radius: 20px;
